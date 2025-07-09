@@ -15,8 +15,9 @@ public class App {
 //        int result = studentDao.insert(student);
 //        System.out.println("Student added"+ result);
 
-        Student student = new Student(666, "Satpal", "Assam");
-        int result= studentDao.change(student);
+//        Student student = new Student(666, "Satpal", "Assam");
+//        int result= studentDao.change(student);
+        int result= studentDao.delete(666);
         System.out.println("Student added"+ result);
     }
 }

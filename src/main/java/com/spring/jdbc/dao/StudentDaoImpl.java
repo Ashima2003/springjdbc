@@ -28,4 +28,11 @@ public class StudentDaoImpl implements StudentDao{
         int r= this.jdbcTemplate.update(query, student.getName(), student.getCity(), student.getId());
         return r;
     }
+
+    @Override
+    public int delete(int studentId) {
+        String query = "delete from student where id=?";
+        int result =  this.jdbcTemplate.update(query, studentId);
+        return result;
+    }
 }
