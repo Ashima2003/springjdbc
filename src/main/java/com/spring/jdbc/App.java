@@ -32,8 +32,8 @@ public class App {
 
         ApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-        Student student = new Student(450, "Satpal", "Srinagar");
-        int result = studentDao.insert(student);
+//        Student student = new Student(666, "Satpal", "Srinagar");
+        int result = studentDao.delete(666);
         System.out.println("Student added"+ result);
 
     }
