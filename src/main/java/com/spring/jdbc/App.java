@@ -11,8 +11,12 @@ public class App {
         System.out.println("Hello world!");
         ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
         StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-        Student student = new Student(666, "John", "Lucknow");
-        int result = studentDao.insert(student);
+//        Student student = new Student(666, "John", "Lucknow");
+//        int result = studentDao.insert(student);
+//        System.out.println("Student added"+ result);
+
+        Student student = new Student(666, "Satpal", "Assam");
+        int result= studentDao.change(student);
         System.out.println("Student added"+ result);
     }
 }
